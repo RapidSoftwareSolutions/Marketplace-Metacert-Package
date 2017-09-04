@@ -1,0 +1,66 @@
+{
+    "package": "Metacert",
+    "tagline": "Metacert API",
+    "description": "The MetaCert Security API allows you to look up the classification or reputation of URLs and IP addresses against our \u201cMalware & Phishing\u201d and \u201cPornography\u201d collections. We will add more categories in the coming months.",
+    "image": "https:\/\/logo.clearbit.com\/metacert.com",
+    "repo": "https:\/\/github.com\/RapidSoftwareSolutions\/Marketplace-Metacert-Package",
+    "keywords": [
+        "API",
+        "analytics",
+        "analyze",
+        "reputation",
+        "classification"
+    ],
+    "accounts": {
+        "domain": "https:\/\/www.metacert.com\/",
+        "credentials": [
+            "apiKey"
+        ]
+    },
+    "blocks": [
+        {
+            "name": "analyzeUrl",
+            "description": "Analyze provided URL",
+            "args": [
+                {
+                    "name": "apiKey",
+                    "type": "credentials",
+                    "info": "Your API key",
+                    "required": true
+                },
+                {
+                    "name": "url",
+                    "type": "String",
+                    "info": "Url for analysis",
+                    "required": true
+                }
+            ],
+            "vendorRequest": {
+                "url": "https:\/\/dev.metacert.com\/v5\/check\/",
+                "method": "post",
+                "requestParameters": [
+                    {
+                        "type": "json",
+                        "parameters": [
+                            "url"
+                        ]
+                    }
+                ],
+                "headers": {
+                    "apikey": "{$data['apiKey']}",
+                    "Content-Type": "application\/json"
+                }
+            },
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
+            ]
+        }
+    ]
+}
