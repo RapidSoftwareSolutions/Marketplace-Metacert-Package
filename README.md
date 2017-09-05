@@ -6,7 +6,7 @@ The MetaCert Security API allows you to look up the classification or reputation
 * Credentials: apiKey
 
 ## How to get credentials: 
-0. Submit your reqquest for apiKey at [Signup page](https://developer.metacert.com/signup/)
+0. Submit your request for apiKey at [Signup page](https://developer.metacert.com/signup/)
 
 
 
