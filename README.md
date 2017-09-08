@@ -2,7 +2,7 @@
 
 # Metacert Package
 The MetaCert Security API allows you to look up the classification or reputation of URLs and IP addresses against our “Malware & Phishing” and “Pornography” collections. We will add more categories in the coming months.
-* Domain: [Metacert](http://https://www.metacert.com/)
+* Domain: [Metacert](https://www.metacert.com/)
 * Credentials: apiKey
 
 ## How to get credentials: 
